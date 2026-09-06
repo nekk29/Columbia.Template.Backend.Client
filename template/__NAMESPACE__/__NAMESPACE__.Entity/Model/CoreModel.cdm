@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fbf977f3-a376-443e-8380-29a0b8909ad7" apis="__NAMESPACE__.Apis" application="__NAMESPACE__.Application" applicationAbstractions="__NAMESPACE__.Application.Abstractions" domain="__NAMESPACE__.Domain" dto="__NAMESPACE__.Dto" entity="__NAMESPACE__.Entity" repository="__NAMESPACE__.Repository" repositoryAbstractions="__NAMESPACE__.Repository.Abstractions" restClient="__NAMESPACE__.RestClient" database="__NAMESPACE__.Database" test="__NAMESPACE__.Test" xmlns="http://schemas.microsoft.com/dsltools/Columbia">
+  <entities>
+    <domainModelHasEntities Id="17b3aa58-0085-43bd-8e19-3d78ae5417aa">
+      <entity Id="e14ce50c-4cf0-4a8d-b779-0571930610b6" name="Application">
+        <targetEntities>
+          <entityReferencesTargetEntities Id="34d1f57b-489a-474b-b0de-c9337ed7f526" entityReferencesTargetEntitiesId="00001">
+            <entityMoniker Id="8dea158b-2387-403f-b77f-c1629925583f" />
+          </entityReferencesTargetEntities>
+        </targetEntities>
+        <primitiveProperties>
+          <entityHasPrimitiveProperties Id="e6034a87-2b06-44e4-82af-2cb7d299b8e2">
+            <primitiveProperty Id="fdf7c604-ea32-4cce-b797-eb376c9e6017" name="Id" type="Guid" isPrimaryKey="true" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="b51b410b-18a8-49a7-91fc-5b762a768e32">
+            <primitiveProperty Id="bb1b7a62-0d37-476b-bf75-ea8fee10ee63" name="Code" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="fd435779-b47b-4c3c-b633-bddf5a0afd1b">
+            <primitiveProperty Id="6e5b3ad2-19ae-42ba-94c9-d485dc7ae561" name="Name" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="7350fc79-55f4-4119-bba0-d2654983d084">
+            <primitiveProperty Id="a6b73d7c-23eb-4fb3-b410-a40fe3cbff10" name="LogoUri" required="false" />
+          </entityHasPrimitiveProperties>
+        </primitiveProperties>
+      </entity>
+    </domainModelHasEntities>
+    <domainModelHasEntities Id="81673151-f0a6-46df-a759-1a25697eb7ea">
+      <entity Id="8dea158b-2387-403f-b77f-c1629925583f" name="Module" tableName="Modules">
+        <targetEntities>
+          <entityReferencesTargetEntities Id="7694462c-f72a-4b5f-90f0-ac893f58039a" entityReferencesTargetEntitiesId="00001">
+            <entityMoniker Id="d6e9cb7c-1196-4332-a982-297636fa0b30" />
+          </entityReferencesTargetEntities>
+        </targetEntities>
+        <primitiveProperties>
+          <entityHasPrimitiveProperties Id="dfadb8f7-a5ea-4bfc-b3d8-61d5b31ef104">
+            <primitiveProperty Id="f6eb648b-d622-48b6-91df-1e7057ea849f" name="Id" type="Guid" isPrimaryKey="true" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="aa1b321d-266f-4b11-ba7f-ba56fde62267">
+            <primitiveProperty Id="980951c1-1a95-432d-bdd3-fcfe822882a1" name="Code" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="2b6f0dac-bc21-4909-9085-54090aa13e45">
+            <primitiveProperty Id="16d846a9-1ec5-49a4-86ee-e8567edac87c" name="Name" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="f8c7f908-e541-4474-963d-54846c5523d2">
+            <primitiveProperty Id="e2e1461a-ee26-49e9-96e3-9670fbae72f8" name="Description" required="false" />
+          </entityHasPrimitiveProperties>
+        </primitiveProperties>
+        <entityProperties>
+          <entityHasEntityProperties Id="ff7f822a-102f-46dd-bf58-21430fddb9c2">
+            <entityProperty Id="000afa81-2b5c-42d1-8b78-7bbaca3c36ba" entityPropertyId="00001" name="Application" type="Application" entityReferencesTargetEntitiesId="00001" />
+          </entityHasEntityProperties>
+        </entityProperties>
+      </entity>
+    </domainModelHasEntities>
+    <domainModelHasEntities Id="22a0292f-fc8f-43f9-9f4c-715e6dcf5494">
+      <entity Id="d6e9cb7c-1196-4332-a982-297636fa0b30" name="Action">
+        <primitiveProperties>
+          <entityHasPrimitiveProperties Id="2d01aaed-b568-4070-9a31-572224674aad">
+            <primitiveProperty Id="6763221e-e441-41c1-9f82-713d72cae1f1" name="Id" type="Guid" isPrimaryKey="true" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="5156aae9-ec7f-416b-b31a-b3a46beeba19">
+            <primitiveProperty Id="c19e2742-80f4-447e-8246-232fb8af17de" name="ParentActionId" type="Guid" required="false" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="f565a632-fbd4-4ec3-a283-f8a736fee1f4">
+            <primitiveProperty Id="7b1ab0b1-0e00-4003-8b3b-9835633a83a9" name="Code" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="e0c41469-a76c-4550-939d-e42f3c801bd3">
+            <primitiveProperty Id="8b2209ff-ed4d-4ea1-941e-01549b164a16" name="Name" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="577c4acf-485c-4776-96d0-4d82153cc0eb">
+            <primitiveProperty Id="5b6c5589-6cc4-4bb0-8a87-12e1ea386f74" name="Description" required="false" />
+          </entityHasPrimitiveProperties>
+        </primitiveProperties>
+        <entityProperties>
+          <entityHasEntityProperties Id="1dcaaa86-a4d4-4ae0-9660-4ffcb4a6bf37">
+            <entityProperty Id="43bccf75-3019-4e2e-aabf-8f3eebf6bc9e" entityPropertyId="00001" name="Module" type="Module" entityReferencesTargetEntitiesId="00001" />
+          </entityHasEntityProperties>
+        </entityProperties>
+      </entity>
+    </domainModelHasEntities>
+    <domainModelHasEntities Id="a35e28a3-6297-4373-b25e-318aed563480">
+      <entity Id="5a8a0327-eecd-4c87-b330-f53ff58e062e" name="MenuOption">
+        <primitiveProperties>
+          <entityHasPrimitiveProperties Id="fdbee4cb-649e-4fc8-8410-e72a6730b4c7">
+            <primitiveProperty Id="0f3316a7-8bec-4352-a90a-733bbd279ddc" name="Id" type="Guid" isPrimaryKey="true" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="5f76133a-c09c-4161-8202-dac7e90508d6">
+            <primitiveProperty Id="c6c3eb43-58d3-4165-b266-6ae50e977a04" name="ApplicationId" type="Guid" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="1b3bd9d4-d632-40c8-9379-4c75a92f66d5">
+            <primitiveProperty Id="8c92f92f-0dc1-46f0-98e7-b164b9a6e829" name="ParentMenuOptionId" type="Guid" required="false" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="e0f80e46-f8e1-4ef2-85a8-a097c3aa6642">
+            <primitiveProperty Id="842bb804-fe19-43c3-8652-9a615e7279ab" name="ActionId" type="Guid" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="32539a48-c0c0-401b-811f-57c935954d0b">
+            <primitiveProperty Id="304b188e-9c34-47a9-8f5a-c2879ac2d99d" name="Code" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="a077a10b-6fab-4933-a803-2d109cf1d6bb">
+            <primitiveProperty Id="29a6660f-f830-408d-b521-c4d92f507bd9" name="Name" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="687e54a7-e3d8-4be9-a0c0-243d7144ec75">
+            <primitiveProperty Id="46d92044-bd8b-42f4-bfa4-eec667457756" name="Description" required="false" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="dc257b7e-8b29-499b-9651-2905b74c3ae9">
+            <primitiveProperty Id="fe6c4dc2-7d13-459b-beb4-3295db1834a8" name="MenuUri" required="false" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="496b12b5-3f0c-42eb-a31e-16fcb86a6cfd">
+            <primitiveProperty Id="dd1c23aa-ce14-47f6-8245-3baf52013c73" name="MenuIcon" required="false" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="9922e20a-5074-4449-a921-fe407bf1114c">
+            <primitiveProperty Id="de518b99-7a51-4707-a1d7-44d5a77c2af6" name="SortOrder" type="int" />
+          </entityHasPrimitiveProperties>
+        </primitiveProperties>
+      </entity>
+    </domainModelHasEntities>
+    <domainModelHasEntities Id="2a83eb2f-0433-4899-b81d-261f61979afe">
+      <entity Id="2603779c-6bc4-451e-a0ea-c4c47d56d14f" name="Setting">
+        <primitiveProperties>
+          <entityHasPrimitiveProperties Id="e50b3f73-a9ea-4493-ba25-efb9800610bf">
+            <primitiveProperty Id="10156ea9-8063-4bc0-b495-72cfd3cfbb83" name="Group" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="bb564523-42d6-4bf6-bc05-b71efc813234">
+            <primitiveProperty Id="2931aae7-b33d-4ac1-8756-fe0b39abdf6b" name="Code" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="a4b334ac-623f-44c9-9ef3-5655e2867dd0">
+            <primitiveProperty Id="3468e26a-cf4b-42eb-a0e2-46ebb9021548" name="Description" />
+          </entityHasPrimitiveProperties>
+          <entityHasPrimitiveProperties Id="81c599ae-673c-40f3-a4f6-caf581a1a720">
+            <primitiveProperty Id="792696bf-71ab-46b8-ae41-3e73669f6858" name="Value" />
+          </entityHasPrimitiveProperties>
+        </primitiveProperties>
+      </entity>
+    </domainModelHasEntities>
+  </entities>
+</domainModel>

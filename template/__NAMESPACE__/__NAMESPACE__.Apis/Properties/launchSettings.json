@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "__NAMESPACE__.Apis": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7204;http://localhost:5204",
+      "dotnetRunMessages": true
+    },
+    "__NAMESPACE__.Apis.Local": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://myapp.local:7204;http://myapp.local:5204",
+      "dotnetRunMessages": true
+    },
+    "__NAMESPACE__.Apis.Dev": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Dev"
+      },
+      "applicationUrl": "https://localhost:7204;http://localhost:5204",
+      "dotnetRunMessages": true
+    },
+    "__NAMESPACE__.Apis.Test": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Test"
+      },
+      "applicationUrl": "https://localhost:7204;http://localhost:5204",
+      "dotnetRunMessages": true
+    },
+    "__NAMESPACE__.Apis.Uat": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Uat"
+      },
+      "applicationUrl": "https://localhost:7204;http://localhost:5204",
+      "dotnetRunMessages": true
+    },
+    "__NAMESPACE__.Apis.Prod": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Prod"
+      },
+      "applicationUrl": "https://localhost:7204;http://localhost:5204",
+      "dotnetRunMessages": true
+    },
+    "__NAMESPACE__.Apis.Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

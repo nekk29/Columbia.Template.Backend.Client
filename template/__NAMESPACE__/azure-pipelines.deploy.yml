@@ -1,0 +1,39 @@
+steps:
+  - task: UseDotNet@2
+    displayName: Use .NET SDK
+    inputs:
+      packageType: "sdk"
+      version: "10.x"
+      
+  - task: FileTransform@2
+    displayName: Replace settings variables
+    inputs:
+      folderPath: "$(Pipeline.Workspace)/drop"
+      enableXmlTransform: false
+      jsonTargetFiles: "appsettings.json"
+
+  - script: |
+      cd __NAMESPACE__.Apis
+      rm -rf appsettings*.json
+      cp $(Pipeline.Workspace)/drop/appsettings.json .
+      dotnet tool restore && \
+      dotnet ef database update --context CoreDbContext
+    displayName: Running database migrations
+
+  - script: |
+      cd __NAMESPACE__.Apis
+      dotnet tool restore && \
+      dotnet Shakermaker.SqlServer \
+        --source-directory "$(Build.SourcesDirectory)/__NAMESPACE__.Database" \
+        --release "$(ApiOptions.Version)" \
+        --environment "$(ApiOptions.Environment)" \
+        --connection-string "$(ConnectionStrings.DefaultConnection)"
+    displayName: Deploying database changes
+
+  - task: AzureWebApp@1
+    displayName: Deploy to Azure Web App
+    inputs:
+      azureSubscription: "$(Azure.Subscription)"
+      appType: "$(Azure.AppTypeApis)"
+      appName: "$(Azure.AppNameApis)"
+      package: "$(Pipeline.Workspace)/drop"

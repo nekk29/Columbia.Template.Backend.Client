@@ -1,0 +1,27 @@
+steps:
+  - task: UseDotNet@2
+    displayName: Use .NET SDK
+    inputs:
+      packageType: "sdk"
+      version: "10.x"
+
+  - script: dotnet restore "$(solution)"
+    displayName: Restore NuGet packages
+
+  - script: dotnet build "$(solution)" --configuration $(buildConfiguration)
+      --no-restore
+    displayName: Build solution
+
+  - script: |
+      dotnet publish "$(apiProject)" \
+        --configuration $(buildConfiguration) \
+        --output "$(publishDir)" \
+        --no-build
+    displayName: Publish project
+
+  - task: PublishPipelineArtifact@1
+    displayName: Publish pipeline artifact
+    inputs:
+      targetPath: "$(publishDir)"
+      artifact: "drop"
+      publishLocation: "pipeline"

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\__NAMESPACE__.Application.Abstractions\__NAMESPACE__.Application.Abstractions.csproj" />
+		<ProjectReference Include="..\__NAMESPACE__.Domain\__NAMESPACE__.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

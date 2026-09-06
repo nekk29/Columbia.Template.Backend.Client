@@ -1,0 +1,101 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="FluentValidation" Version="12.1.1" />
+		<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+		<PackageReference Include="MediatR" Version="14.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="10.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.7" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+		<PackageReference Include="OpenIddict.AspNetCore" Version="7.5.0" />
+		<PackageReference Include="Scrutor" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\__NAMESPACE__.Common\__NAMESPACE__.Common.csproj" />
+		<ProjectReference Include="..\__NAMESPACE__.Dto\__NAMESPACE__.Dto.csproj" />
+		<ProjectReference Include="..\__NAMESPACE__.EmailClient\__NAMESPACE__.EmailClient.csproj" />
+		<ProjectReference Include="..\__NAMESPACE__.Repository\__NAMESPACE__.Repository.csproj" />
+		<ProjectReference Include="..\__NAMESPACE__.Repository.Abstractions\__NAMESPACE__.Repository.Abstractions.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Resources\Action.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Action.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\Client.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Client.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\Common.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Common.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\Email.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Email.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\Permission.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Permission.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\Role.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Role.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\User.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>User.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Resources\Action.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Action.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Client.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Client.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Common.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Common.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Email.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Email.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Permission.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Permission.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Role.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Role.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\User.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>User.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
